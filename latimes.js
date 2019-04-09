@@ -1,3 +1,39 @@
+$( "#resultado" ).load( "iframe.html" )
+
+/*
+const url3 = "https://www.latimes.com/rss2.0.xml";
+axios.get(url3)
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
+
+/*
+
+$(document).ready(function() {
+	//feed to parse
+	var feed = "http://feeds.feedburner.com/raymondcamdensblog?format=xml";
+	
+	$.ajax(feed, {
+		accepts:{
+			xml:"application/rss+xml"
+		},
+		dataType:"xml",
+		success:function(data) {
+			//Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
+
+			$(data).find("item").each(function () { // or "item" or whatever suits your feed
+				var el = $(this);
+				console.log("------------------------");
+				console.log("title      : " + el.find("title").text());
+				console.log("link       : " + el.find("link").text());
+				console.log("description: " + el.find("description").text());
+			});
+	
+
+		}	
+	});
+	
+});
+
 $.getJSON("https://www.mysanantonio.com/default/feed/local-news-176.php", function(result){
     console.log(result);
 });
@@ -54,3 +90,4 @@ function myFunction(xml) {
 }
 
 loadDoc();
+*/
