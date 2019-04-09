@@ -1,4 +1,5 @@
 $( "#resultado" ).load( "iframe.html" )
+$( "#resultad2" ).load( "https://www.latimes.com/rss2.0.xml" )
 
 /*
 const url3 = "https://www.latimes.com/rss2.0.xml";
