@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Paso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+  <!-- Style to fix the issue of text extend
+    ing past card length -->
+  <!-- Style to fix the issue of text extending past card length -->
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+ 
+
+</head>
+<body>
+    <div id="contenido"></div>
+
+    <script>
+    
+   //$("#contenido").load("http://www.latimes.com/rss2.0.xml?.json?api-key=123");
+    
+   function buildQueryURL() {
+   var queryURL = "pasoa.html?";
+   var queryParams = { "api-key": "0wlpVX7cIjFxYzCD6FmAS39d2lmBKh1O" };
+   return queryURL + $.param(queryParams);
+  }
+  
+
+  var queryURL = buildQueryURL();
+  $.ajax({
+    url: queryURL,
+    type: "POST",
+    dataType: 'jsonp',
+    cache: false,
+    success: function(data)
+    {
+      $modal.find('#contenido').html(data);
+    }
+  });
+
+/*
+  $.getJSON("http://www.latimes.com/rss2.0.xml?callback=?", function(json){
+    console.log('getJSON call: ', json);
+  });
+*/
+
+    </script>
+
+ <!-- jQuery JS -->
+
+ <script src="https://code.jquery.com/jquery.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+ <!-- Code to the JavaScript File -->
+
+</body>
+</html>
