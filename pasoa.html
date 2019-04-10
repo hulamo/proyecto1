@@ -25,6 +25,26 @@
     <div>Prueba</div>
     <div id="contenido"></div>
 
+    <h2>Using the XMLHttpRequest Object</h2>
+
+    <div id="demo">
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+    </div>
+    
+    <script>
+    function loadXMLDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "http://www.latimes.com/rss2.0.xml", true);
+      xhttp.send();
+    }
+    </script>
+
     <script>
     
    //$("#contenido").load("http://www.latimes.com/rss2.0.xml?.json?api-key=123");
