@@ -40,7 +40,7 @@
           this.responseText;
         }
       };
-      xhttp.open("GET", "http://www.latimes.com/rss2.0.xml", true);
+      xhttp.open("GET", "https://www.latimes.com/rss2.0.xml", true);
       xhttp.send();
     }
     </script>
@@ -50,7 +50,7 @@
    //$("#contenido").load("http://www.latimes.com/rss2.0.xml?.json?api-key=123");
     
    function buildQueryURL() {
-   var queryURL = "http://www.latimes.com/rss2.0.xml";
+   var queryURL = "https://www.latimes.com/rss2.0.xml";
    var queryParams = { };
    return queryURL + $.param(queryParams);
   }
